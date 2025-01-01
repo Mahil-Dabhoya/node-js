@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Record</title>
+    <style>
+        /* General reset */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+        }
+
+        /* Form container */
+        form {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Form title */
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Input labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        /* Input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Submit button */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Navigation link */
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form action="/edit/<%= record.id %>" method="POST">
+        <h1>Edit Record</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= record.name %>" placeholder="Enter updated name" required>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" value="<%= record.phone %>" placeholder="Enter updated phone number" required>
+        <button type="submit">Update</button>
+        <a class="back-link" href="/view">Back to Records</a>
+    </form>
+</body>
+</html>
