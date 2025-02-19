@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BlogCanvas</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+            transform: rotate(-2deg);
+        }
+
+        h2 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            animation: neonGlow 1.5s infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            from { text-shadow: 0 0 5px #fff, 0 0 10px #ff4b2b, 0 0 15px #ff4b2b; }
+            to { text-shadow: 0 0 10px #fff, 0 0 20px #ff416c, 0 0 30px #ff416c; }
+        }
+
+        .input-group {
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .input-group input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        .link {
+            display: block;
+            margin-top: 1rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .link:hover {
+            color: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Login </h2>
+        <form action="/loginUser" method="post" autocomplete="off">
+            <div class="input-group">
+                <input type="text" name="email" required placeholder="📨 Enter Email">
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" required placeholder="🔒 Enter Password">
+            </div>
+            <button type="submit" class="btn">🚀 LET'S GO!</button>
+        </form>
+        <a href="/register" class="link">🌀 No account? Create one!</a>
+    </div>
+</body>
+</html>

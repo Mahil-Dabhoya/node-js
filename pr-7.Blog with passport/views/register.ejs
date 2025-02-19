@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Crazy Register 🔥</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transform: rotate(-3deg);
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #fff, 0 0 10px #ffeb3b; }
+            to { text-shadow: 0 0 10px #fff, 0 0 20px #ff416c; }
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 0.9rem;
+            color: #fff;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            outline: none;
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        .toggle-text {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .toggle-text a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .toggle-text a:hover {
+            color: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Register </h2>
+        <form action="/registerUser" method="post">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="📝 Your Name">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="📨 Your Email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="🔒 Secure Password">
+            </div>
+            <button type="submit" class="btn">🚀 Get Started</button>
+        </form>
+        <p class="toggle-text">Already have an account? <a href="/">🔥 Login Now!</a></p>
+    </div>
+</body>
+</html>
