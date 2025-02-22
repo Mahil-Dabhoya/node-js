@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 Crazy Register 🔥</title>
+    <title>🚀 Join the Blogverse</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
@@ -19,33 +19,32 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            background: radial-gradient(circle, #1e3c72, #2a5298);
             backdrop-filter: blur(10px);
         }
 
         .container {
-            width: 400px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 420px;
+            background: rgba(255, 255, 255, 0.2);
             padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             text-align: center;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             border: 2px solid rgba(255, 255, 255, 0.3);
-            transform: rotate(-3deg);
         }
 
         h2 {
             font-size: 2rem;
             font-weight: 600;
             color: #fff;
-            text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b;
+            text-shadow: 0 0 15px #ffeb3b, 0 0 25px #ffeb3b;
             animation: glow 1.5s infinite alternate;
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 5px #fff, 0 0 10px #ffeb3b; }
-            to { text-shadow: 0 0 10px #fff, 0 0 20px #ff416c; }
+            from { text-shadow: 0 0 10px #fff, 0 0 20px #ffeb3b; }
+            to { text-shadow: 0 0 15px #fff, 0 0 30px #ff9800; }
         }
 
         .input-group {
@@ -54,7 +53,7 @@
         }
 
         .input-group label {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #fff;
             display: block;
             margin-bottom: 5px;
@@ -64,17 +63,21 @@
             width: 100%;
             padding: 12px;
             border: none;
-            border-radius: 12px;
+            border-radius: 10px;
             font-size: 1rem;
             background: rgba(255, 255, 255, 0.2);
             color: #fff;
             outline: none;
-            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .input-group input:focus {
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .btn {
             width: 100%;
-            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             padding: 12px;
             border: none;
@@ -82,11 +85,13 @@
             font-size: 1rem;
             cursor: pointer;
             font-weight: bold;
-            transition: 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 235, 59, 0.3);
         }
 
         .btn:hover {
-            transform: scale(1.1) rotate(3deg);
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 235, 59, 0.5);
         }
 
         .toggle-text {
@@ -96,36 +101,36 @@
         }
 
         .toggle-text a {
-            color: #fff;
+            color: #ffeb3b;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: bold;
             transition: color 0.3s;
         }
 
         .toggle-text a:hover {
-            color: #ffeb3b;
+            color: #ff9800;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2> Register </h2>
+        <h2>🚀 Register Now</h2>
         <form action="/registerUser" method="post">
             <div class="input-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="📝 Your Name">
+                <label for="name">🌟 Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
             </div>
             <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="📨 Your Email">
+                <label for="email">📩 Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
             </div>
             <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required placeholder="🔒 Secure Password">
+                <label for="password">🔒 Password</label>
+                <input type="password" id="password" name="password" required placeholder="Choose a strong password">
             </div>
-            <button type="submit" class="btn">🚀 Get Started</button>
+            <button type="submit" class="btn">🔥 Join Now</button>
         </form>
-        <p class="toggle-text">Already have an account? <a href="/">🔥 Login Now!</a></p>
+        <p class="toggle-text">Already a member? <a href="/">Login Here</a></p>
     </div>
 </body>
 </html>
